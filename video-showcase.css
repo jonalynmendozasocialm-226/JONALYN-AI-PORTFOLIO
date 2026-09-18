@@ -1,0 +1,14 @@
+.video-showcase { padding: 30px; background: radial-gradient(circle at 20% 0, rgba(185,255,56,.09), transparent 38%), #070b08; }
+.video-showcase-head { display: grid; grid-template-columns: 44px 1fr; gap: 16px; margin-bottom: 24px; }
+.video-showcase-head > span { color: var(--lime); font: 600 13px var(--font-display); }
+.video-showcase-head p { margin: 0 0 8px; color: var(--lime); font-size: 11px; letter-spacing: .12em; }
+.video-showcase-head h3 { max-width: 760px; margin: 0 0 8px; font-size: clamp(1.5rem, 3vw, 2.35rem); }
+.video-showcase-head small { color: var(--muted); font-size: 13px; }
+.video-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.video-grid figure { margin: 0; overflow: hidden; background: #030504; border: 1px solid rgba(255,255,255,.1); }
+.video-grid video { display: block; width: 100%; aspect-ratio: 9/16; object-fit: cover; background: #000; }
+.video-grid figcaption { display: flex; flex-direction: column; gap: 2px; padding: 12px; }
+.video-grid figcaption b { color: var(--white); font: 600 13px var(--font-display); }
+.video-grid figcaption span { color: var(--muted); font-size: 12px; }
+@media (max-width: 900px) { .video-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .video-showcase { padding: 18px; } .video-showcase-head { grid-template-columns: 1fr; } .video-grid { gap: 9px; } .video-grid figcaption { padding: 9px; } }

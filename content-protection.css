@@ -1,0 +1,30 @@
+img, video { -webkit-user-drag: none; user-select: none; }
+.proof-gallery a,
+.proof-feature,
+.project-proof-media,
+.video-grid figure { position: relative; }
+.proof-gallery a::before,
+.proof-feature::after,
+.project-proof-media::before,
+.video-grid figure::after {
+  content: "© JONALYN MENDOZA · PORTFOLIO PREVIEW";
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  z-index: 7;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 88%;
+  padding: 5px 8px;
+  background: rgba(0,0,0,.58);
+  border: 1px solid rgba(185,255,56,.38);
+  color: rgba(225,255,184,.9);
+  font: 600 9px var(--font-display);
+  letter-spacing: .08em;
+  pointer-events: none;
+}
+.video-grid figure::after { bottom: 64px; }
+@media (max-width: 520px) {
+  .proof-gallery a::before,.proof-feature::after,.project-proof-media::before,.video-grid figure::after { font-size: 7px; letter-spacing: .04em; }
+  .video-grid figure::after { bottom: 58px; }
+}

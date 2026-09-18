@@ -1,0 +1,15 @@
+.contact-actions .button { min-width: 280px; }
+.contact-email {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 14px;
+  text-decoration: underline;
+  text-decoration-color: rgba(185, 255, 56, .38);
+  text-underline-offset: 4px;
+}
+.contact-email:hover,
+.social-placeholders a:hover { color: var(--lime); }
+@media (max-width: 640px) {
+  .contact-actions .button { width: 100%; min-width: 0; }
+  .contact-email { overflow-wrap: anywhere; }
+}

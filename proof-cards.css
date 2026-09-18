@@ -1,0 +1,50 @@
+.project-proof-media {
+  display: block;
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  background: #101511;
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+.project-proof-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .35s ease, filter .35s ease;
+}
+
+.project-proof-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, .72), transparent 45%);
+  pointer-events: none;
+}
+
+.project-proof-media > span {
+  position: absolute;
+  right: 18px;
+  bottom: 15px;
+  z-index: 2;
+  padding: 7px 10px;
+  background: rgba(3, 5, 4, .82);
+  border: 1px solid rgba(185, 255, 56, .42);
+  color: var(--lime);
+  font-size: 11px;
+  letter-spacing: .08em;
+}
+
+.project-proof-media:hover img { transform: scale(1.025); filter: brightness(1.08); }
+.project-copy > span { color: var(--muted); font-size: 13px; }
+.project-kpis { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 15px; }
+.project-kpis b {
+  padding: 6px 9px;
+  background: rgba(185, 255, 56, .04);
+  border: 1px solid rgba(185, 255, 56, .25);
+  color: var(--lime-soft);
+  font: 600 11px var(--font-display);
+}
+
+@media (max-width: 640px) { .project-proof-media { height: 220px; } }
